@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -114,8 +113,8 @@ const About = () => {
                   <MapPin className="h-5 w-5 text-primary mr-3 mt-0.5" />
                   <div>
                     <h3 className="font-bold mb-1">Location</h3>
-                    <p className="text-gray-600">Student Union Building, First Floor</p>
-                    <p className="text-gray-600">123 University Avenue</p>
+                    <p className="text-gray-600">RGUKT RKV KADAPA</p>
+                    <p className="text-gray-600">Academic Block</p>
                   </div>
                 </div>
                 
@@ -133,7 +132,7 @@ const About = () => {
                   <Phone className="h-5 w-5 text-primary mr-3 mt-0.5" />
                   <div>
                     <h3 className="font-bold mb-1">Phone</h3>
-                    <p className="text-gray-600">(555) 123-4567</p>
+                    <p className="text-gray-600">+91 9001234323</p>
                   </div>
                 </div>
                 
@@ -147,12 +146,8 @@ const About = () => {
               </div>
             </div>
             
-            <div className="rounded-lg overflow-hidden h-64 md:h-auto">
-              {/* Placeholder for map - in a real app, this would be a Google Maps embed */}
-              <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                <p className="text-gray-500">Campus Map</p>
-              </div>
-            </div>
+            {/* Remove the map placeholder */}
+            <div className="hidden md:block"></div>
           </div>
         </section>
 
