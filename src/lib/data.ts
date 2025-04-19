@@ -48,108 +48,102 @@ const USD_TO_INR_RATE = 83;
 export const menuItems: MenuItem[] = [
   {
     id: "1",
-    name: "Classic Burger",
-    description: "Juicy beef patty with lettuce, tomato, and special sauce",
-    price: 8.99,
-    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&h=400&fit=crop",
+    name: "Masala Dosa",
+    description: "Crispy rice and lentil crepe served with potato masala, coconut chutney, and sambar",
+    price: 80,
+    image: "https://images.unsplash.com/photo-1630407355601-e1e339167f14?w=500&h=400&fit=crop",
     category: "main-dishes",
     popular: true,
     options: [
       {
         name: "Add-ons",
         choices: [
-          { id: "cheese", name: "Cheese", price: 1.00 },
-          { id: "bacon", name: "Bacon", price: 1.50 },
-          { id: "avocado", name: "Avocado", price: 2.00 }
-        ]
-      },
-      {
-        name: "Size",
-        choices: [
-          { id: "regular", name: "Regular", price: 0 },
-          { id: "double", name: "Double", price: 3.50 }
+          { id: "ghee", name: "Extra Ghee", price: 15 },
+          { id: "chutney", name: "Extra Chutney", price: 20 },
+          { id: "sambar", name: "Extra Sambar", price: 25 }
         ]
       }
     ]
   },
   {
     id: "2",
-    name: "Vegetarian Wrap",
-    description: "Fresh vegetables and hummus wrapped in a whole wheat tortilla",
-    price: 7.49,
-    image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=500&h=400&fit=crop",
+    name: "Paneer Butter Masala",
+    description: "Cottage cheese cubes in rich, creamy tomato gravy with aromatic spices",
+    price: 160,
+    image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=500&h=400&fit=crop",
     category: "main-dishes",
-    popular: false,
+    popular: true,
     options: [
       {
-        name: "Dressing",
+        name: "Spice Level",
         choices: [
-          { id: "tahini", name: "Tahini", price: 0 },
-          { id: "yogurt", name: "Yogurt Dressing", price: 0 }
+          { id: "mild", name: "Mild", price: 0 },
+          { id: "medium", name: "Medium", price: 0 },
+          { id: "spicy", name: "Spicy", price: 0 }
         ]
       }
     ]
   },
   {
     id: "3",
-    name: "Chicken Caesar Salad",
-    description: "Crisp romaine lettuce, grilled chicken, parmesan, and croutons",
-    price: 9.99,
-    image: "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=500&h=400&fit=crop",
+    name: "Chicken Biryani",
+    description: "Fragrant basmati rice cooked with tender chicken and aromatic spices",
+    price: 180,
+    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&h=400&fit=crop",
     category: "main-dishes",
     popular: true
   },
   {
     id: "4",
-    name: "Margherita Pizza",
-    description: "Fresh tomatoes, mozzarella, and basil on a thin crust",
-    price: 11.99,
-    image: "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=500&h=400&fit=crop",
-    category: "main-dishes",
+    name: "Samosa",
+    description: "Crispy pastry filled with spiced potatoes and peas",
+    price: 30,
+    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500&h=400&fit=crop",
+    category: "sides",
     popular: true,
     options: [
       {
-        name: "Crust",
+        name: "Quantity",
         choices: [
-          { id: "thin", name: "Thin", price: 0 },
-          { id: "thick", name: "Thick", price: 1.00 }
+          { id: "two", name: "2 pieces", price: 0 },
+          { id: "four", name: "4 pieces", price: 30 }
         ]
       }
     ]
   },
   {
     id: "5",
-    name: "French Fries",
-    description: "Crispy, golden fries served with ketchup",
-    price: 3.99,
-    image: "https://images.unsplash.com/photo-1576107232684-1279f390859f?w=500&h=400&fit=crop",
-    category: "sides",
+    name: "Vada Pav",
+    description: "Spiced potato fritter in a bun with chutneys",
+    price: 40,
+    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=500&h=400&fit=crop",
+    category: "main-dishes",
     popular: true,
     options: [
       {
-        name: "Size",
+        name: "Add-ons",
         choices: [
-          { id: "small", name: "Small", price: 0 },
-          { id: "large", name: "Large", price: 1.50 }
+          { id: "extra-chutney", name: "Extra Chutney", price: 10 },
+          { id: "cheese", name: "Cheese Slice", price: 15 }
         ]
       }
     ]
   },
   {
     id: "6",
-    name: "Garden Salad",
-    description: "Mixed greens, tomatoes, cucumbers, and balsamic vinaigrette",
-    price: 4.99,
-    image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&h=400&fit=crop",
-    category: "sides",
+    name: "Chole Bhature",
+    description: "Spiced chickpea curry served with deep-fried bread",
+    price: 120,
+    image: "https://images.unsplash.com/photo-1626678976950-3e9a481ec193?w=500&h=400&fit=crop",
+    category: "main-dishes",
     popular: false
   },
   {
     id: "7",
-    name: "Soft Drink",
-    description: "Choose from a variety of refreshing sodas",
-    price: 1.99,
-    image: "https://images.unsplash.com/photo-1603394630850-69b3ca8025c8?w=500&h=400&fit=crop",
+    name: "Masala Chai",
+    description: "Traditional Indian spiced tea with milk",
+    price: 30,
+    image: "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?w=500&h=400&fit=crop",
     category: "drinks",
     popular: true,
     options: [
@@ -157,56 +151,54 @@ export const menuItems: MenuItem[] = [
         name: "Size",
         choices: [
           { id: "small", name: "Small", price: 0 },
-          { id: "medium", name: "Medium", price: 0.50 },
-          { id: "large", name: "Large", price: 1.00 }
+          { id: "large", name: "Large", price: 15 }
         ]
       }
     ]
   },
   {
     id: "8",
-    name: "Iced Tea",
-    description: "Freshly brewed and sweetened to perfection",
-    price: 2.49,
-    image: "https://images.unsplash.com/photo-1556679343-c1917e0cbcc9?w=500&h=400&fit=crop",
+    name: "Lassi",
+    description: "Sweet yogurt-based drink with cardamom",
+    price: 60,
+    image: "https://images.unsplash.com/photo-1626082922482-ac8b9b595e2c?w=500&h=400&fit=crop",
     category: "drinks",
     popular: false
   },
   {
     id: "9",
-    name: "Coffee",
-    description: "Hot, aromatic coffee to keep you energized",
-    price: 2.99,
-    image: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500&h=400&fit=crop",
+    name: "Filter Coffee",
+    description: "South Indian style coffee with chicory",
+    price: 40,
+    image: "https://images.unsplash.com/photo-1598811465492-4138d1f4fbee?w=500&h=400&fit=crop",
     category: "drinks",
     popular: true
   },
   {
     id: "10",
-    name: "Chocolate Brownie",
-    description: "Rich, fudgy brownie with a scoop of vanilla ice cream",
-    price: 5.99,
-    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&h=400&fit=crop",
+    name: "Gulab Jamun",
+    description: "Deep-fried milk solids soaked in sugar syrup",
+    price: 60,
+    image: "https://images.unsplash.com/photo-1605196560547-b2f7281b7097?w=500&h=400&fit=crop",
     category: "desserts",
     popular: true
   },
   {
     id: "11",
-    name: "Fruit Parfait",
-    description: "Layers of fresh fruit, yogurt, and granola",
-    price: 4.49,
-    image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&h=400&fit=crop",
+    name: "Rasmalai",
+    description: "Soft cottage cheese dumplings in saffron milk",
+    price: 80,
+    image: "https://images.unsplash.com/photo-1634481570432-0753336a4641?w=500&h=400&fit=crop",
     category: "desserts",
     popular: false
   },
   {
     id: "12",
-    name: "Cheesecake",
-    description: "Creamy New York style cheesecake with berry compote",
-    price: 6.49,
-    image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&h=400&fit=crop",
+    name: "Jalebi",
+    description: "Crispy, syrup-soaked spiral sweets",
+    price: 50,
+    image: "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=500&h=400&fit=crop",
     category: "desserts",
     popular: true
   }
 ];
-
