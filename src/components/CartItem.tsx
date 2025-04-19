@@ -1,8 +1,8 @@
-
 import { useState } from "react";
 import { Minus, Plus, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCart, CartItem } from "@/lib/cartContext";
+import { IndianRupee } from 'lucide-react';
 
 interface CartItemProps {
   item: CartItem;
@@ -55,7 +55,9 @@ export function CartItemComponent({ item, index }: CartItemProps) {
       </div>
       
       <div className="flex flex-col gap-2 items-end">
-        <div className="text-primary font-bold">${calculateItemTotal()}</div>
+        <div className="text-primary font-bold flex items-center">
+        <IndianRupee className="h-4 w-4 mr-1" />{calculateItemTotal()}
+      </div>
         
         <div className="flex items-center gap-2">
           <Button 

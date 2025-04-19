@@ -1,4 +1,3 @@
-
 // Mock data for the canteen ordering system
 export interface MenuItem {
   id: string;
@@ -42,6 +41,9 @@ export const categories: Category[] = [
     description: "Sweet treats to finish your meal"
   }
 ];
+
+// Conversion rate (approximate): 1 USD = 83 INR (as of 2024)
+const USD_TO_INR_RATE = 83;
 
 export const menuItems: MenuItem[] = [
   {
@@ -207,3 +209,4 @@ export const menuItems: MenuItem[] = [
     popular: true
   }
 ];
+

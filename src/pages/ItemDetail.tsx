@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ChevronLeft, Minus, Plus, ShoppingBag } from "lucide-react";
@@ -10,6 +9,7 @@ import { Navbar } from "@/components/Navbar";
 import { useToast } from "@/hooks/use-toast";
 import { useCart } from "@/lib/cartContext";
 import { menuItems, MenuItem } from "@/lib/data";
+import { IndianRupee } from 'lucide-react';
 
 interface SelectedOptions {
   [key: string]: {
@@ -134,7 +134,10 @@ const ItemDetail = () => {
 
           <div>
             <h1 className="text-3xl font-bold mb-2">{item.name}</h1>
-            <p className="text-xl font-bold text-primary mb-4">${item.price.toFixed(2)}</p>
+            <p className="text-xl font-bold text-primary mb-4 flex items-center">
+              <IndianRupee className="h-5 w-5 mr-1" />
+              {item.price.toFixed(2)}
+            </p>
             <p className="text-gray-600 mb-6">{item.description}</p>
 
             {item.options && item.options.map((option) => (
@@ -154,7 +157,12 @@ const ItemDetail = () => {
                       <RadioGroupItem value={choice.id} id={`${option.name}-${choice.id}`} />
                       <Label htmlFor={`${option.name}-${choice.id}`} className="flex justify-between w-full">
                         <span>{choice.name}</span>
-                        {choice.price > 0 && <span>+${choice.price.toFixed(2)}</span>}
+                        {choice.price > 0 && (
+                          <span className="flex items-center">
+                            <IndianRupee className="h-4 w-4 mr-1" />
+                            {choice.price.toFixed(2)}
+                          </span>
+                        )}
                       </Label>
                     </div>
                   ))}
@@ -200,7 +208,7 @@ const ItemDetail = () => {
                   onClick={handleAddToCart}
                 >
                   <ShoppingBag className="mr-2 h-4 w-4" />
-                  Add to Cart - ${totalPrice.toFixed(2)}
+                  Add to Cart - <IndianRupee className="mx-1 h-4 w-4" />{totalPrice.toFixed(2)}
                 </Button>
               </div>
             </div>

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ChevronLeft, ShoppingCart, Trash2 } from "lucide-react";
@@ -8,6 +7,7 @@ import { CartItemComponent } from "@/components/CartItem";
 import { Navbar } from "@/components/Navbar";
 import { useCart } from "@/lib/cartContext";
 import { useToast } from "@/hooks/use-toast";
+import { IndianRupee } from 'lucide-react';
 
 const Cart = () => {
   const { cart, cartTotal, clearCart } = useCart();
@@ -97,21 +97,30 @@ const Cart = () => {
             
             <div className="p-6">
               <div className="flex justify-between mb-2">
-                <span>Subtotal</span>
-                <span>${cartTotal.toFixed(2)}</span>
-              </div>
-              
-              <div className="flex justify-between mb-2">
-                <span>Service Fee</span>
-                <span>${(cartTotal * 0.05).toFixed(2)}</span>
-              </div>
-              
-              <Separator className="my-4" />
-              
-              <div className="flex justify-between font-bold text-lg mb-6">
-                <span>Total</span>
-                <span>${(cartTotal * 1.05).toFixed(2)}</span>
-              </div>
+        <span>Subtotal</span>
+        <span className="flex items-center">
+          <IndianRupee className="h-4 w-4 mr-1" />
+          {cartTotal.toFixed(2)}
+        </span>
+      </div>
+      
+      <div className="flex justify-between mb-2">
+        <span>Service Fee</span>
+        <span className="flex items-center">
+          <IndianRupee className="h-4 w-4 mr-1" />
+          {(cartTotal * 0.05).toFixed(2)}
+        </span>
+      </div>
+      
+      <Separator className="my-4" />
+      
+      <div className="flex justify-between font-bold text-lg mb-6">
+        <span>Total</span>
+        <span className="flex items-center">
+          <IndianRupee className="h-4 w-4 mr-1" />
+          {(cartTotal * 1.05).toFixed(2)}
+        </span>
+      </div>
               
               <Button 
                 className="w-full"

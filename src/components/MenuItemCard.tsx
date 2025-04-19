@@ -1,8 +1,8 @@
-
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MenuItem } from "@/lib/data";
+import { IndianRupee } from 'lucide-react';
 
 interface MenuItemCardProps {
   item: MenuItem;
@@ -21,7 +21,10 @@ export function MenuItemCard({ item }: MenuItemCardProps) {
       <CardContent className="p-4">
         <div className="flex justify-between items-start mb-2">
           <h3 className="font-bold text-lg line-clamp-1">{item.name}</h3>
-          <span className="font-bold text-primary">${item.price.toFixed(2)}</span>
+          <span className="font-bold text-primary flex items-center">
+            <IndianRupee className="h-4 w-4 mr-1" />
+            {item.price.toFixed(2)}
+          </span>
         </div>
         <p className="text-gray-500 text-sm line-clamp-2 h-10">{item.description}</p>
       </CardContent>
