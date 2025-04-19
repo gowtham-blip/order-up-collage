@@ -21,7 +21,7 @@ export function CartItemComponent({ item, index }: CartItemProps) {
   };
 
   const calculateItemTotal = () => {
-    return (item.totalPrice * item.quantity).toFixed(2);
+    return Math.round(item.totalPrice * item.quantity);
   };
 
   return (
@@ -41,7 +41,7 @@ export function CartItemComponent({ item, index }: CartItemProps) {
           <div className="text-sm text-gray-500 mt-1">
             {Object.entries(item.selectedOptions).map(([category, option]) => (
               <div key={category}>
-                {category}: {option.name} {option.price > 0 ? `(+$${option.price.toFixed(2)})` : ''}
+                {category}: {option.name} {option.price > 0 ? `(+₹${Math.round(option.price)})` : ''}
               </div>
             ))}
           </div>
@@ -56,8 +56,8 @@ export function CartItemComponent({ item, index }: CartItemProps) {
       
       <div className="flex flex-col gap-2 items-end">
         <div className="text-primary font-bold flex items-center">
-        <IndianRupee className="h-4 w-4 mr-1" />{calculateItemTotal()}
-      </div>
+          <IndianRupee className="h-4 w-4 mr-1" />{calculateItemTotal()}
+        </div>
         
         <div className="flex items-center gap-2">
           <Button 

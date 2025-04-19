@@ -136,7 +136,7 @@ const ItemDetail = () => {
             <h1 className="text-3xl font-bold mb-2">{item.name}</h1>
             <p className="text-xl font-bold text-primary mb-4 flex items-center">
               <IndianRupee className="h-5 w-5 mr-1" />
-              {item.price.toFixed(2)}
+              {Math.round(item.price)}
             </p>
             <p className="text-gray-600 mb-6">{item.description}</p>
 
@@ -160,7 +160,7 @@ const ItemDetail = () => {
                         {choice.price > 0 && (
                           <span className="flex items-center">
                             <IndianRupee className="h-4 w-4 mr-1" />
-                            {choice.price.toFixed(2)}
+                            {Math.round(choice.price)}
                           </span>
                         )}
                       </Label>
@@ -208,7 +208,7 @@ const ItemDetail = () => {
                   onClick={handleAddToCart}
                 >
                   <ShoppingBag className="mr-2 h-4 w-4" />
-                  Add to Cart - <IndianRupee className="mx-1 h-4 w-4" />{totalPrice.toFixed(2)}
+                  Add to Cart - <IndianRupee className="mx-1 h-4 w-4" />{Math.round(totalPrice)}
                 </Button>
               </div>
             </div>

@@ -23,7 +23,7 @@ export function MenuItemCard({ item }: MenuItemCardProps) {
           <h3 className="font-bold text-lg line-clamp-1">{item.name}</h3>
           <span className="font-bold text-primary flex items-center">
             <IndianRupee className="h-4 w-4 mr-1" />
-            {item.price.toFixed(2)}
+            {Math.round(item.price)}
           </span>
         </div>
         <p className="text-gray-500 text-sm line-clamp-2 h-10">{item.description}</p>

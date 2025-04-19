@@ -100,7 +100,7 @@ const Cart = () => {
         <span>Subtotal</span>
         <span className="flex items-center">
           <IndianRupee className="h-4 w-4 mr-1" />
-          {cartTotal.toFixed(2)}
+          {Math.round(cartTotal)}
         </span>
       </div>
       
@@ -108,7 +108,7 @@ const Cart = () => {
         <span>Service Fee</span>
         <span className="flex items-center">
           <IndianRupee className="h-4 w-4 mr-1" />
-          {(cartTotal * 0.05).toFixed(2)}
+          {Math.round(cartTotal * 0.05)}
         </span>
       </div>
       
@@ -118,7 +118,7 @@ const Cart = () => {
         <span>Total</span>
         <span className="flex items-center">
           <IndianRupee className="h-4 w-4 mr-1" />
-          {(cartTotal * 1.05).toFixed(2)}
+          {Math.round(cartTotal * 1.05)}
         </span>
       </div>
               

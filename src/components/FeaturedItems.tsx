@@ -1,9 +1,9 @@
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { menuItems } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { IndianRupee } from 'lucide-react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -49,7 +49,10 @@ export function FeaturedItems() {
                 <div className="p-4">
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="font-bold text-lg">{item.name}</h3>
-                    <span className="font-bold text-primary">${item.price.toFixed(2)}</span>
+                    <span className="font-bold text-primary flex items-center">
+                      <IndianRupee className="h-4 w-4 mr-1" />
+                      {Math.round(item.price)}
+                    </span>
                   </div>
                   <p className="text-gray-500 text-sm mb-4 line-clamp-2">{item.description}</p>
                   <Link to={`/item/${item.id}`}>
